@@ -1,0 +1,80 @@
+{
+  "short_name": "E-Commerce Pro",
+  "name": "Enterprise E-Commerce Platform",
+  "description": "A modern, feature-rich e-commerce marketplace",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["shopping", "e-commerce", "marketplace"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.ecommercepro.app"
+    },
+    {
+      "platform": "itunes",
+      "id": "com.ecommercepro.app"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Products",
+      "short_name": "Search",
+      "description": "Search for products quickly",
+      "url": "/search",
+      "icons": [
+        {
+          "src": "/icons/search-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "My Orders",
+      "short_name": "Orders",
+      "description": "View your order history",
+      "url": "/profile/orders",
+      "icons": [
+        {
+          "src": "/icons/orders-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Shopping Cart",
+      "short_name": "Cart",
+      "description": "View your shopping cart",
+      "url": "/cart",
+      "icons": [
+        {
+          "src": "/icons/cart-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+.toolkit-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  
+  .toolkit-title {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  .toolkit-divider {
+    margin: 20px 0;
+  }
+  
+  ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  footer.toolkit-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+  }
+  
