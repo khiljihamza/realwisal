@@ -1,9 +1,8 @@
 import React from 'react';
-import { cn } from '@/utils/cn';
 import { Badge, DiscountBadge, StockBadge, FreeShippingBadge } from './Badge';
 import { CompactRating } from './RatingStars';
-import { Button } from './Button';
-import { Product } from '@/types';
+import { FiHeart, FiShoppingCart, FiEye, FiCheckCircle } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 export interface ProductCardProps {
   product: Product;

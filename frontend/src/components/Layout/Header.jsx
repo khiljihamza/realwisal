@@ -11,6 +11,7 @@ import {
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
+import { FiSun, FiMoon, FiGlobe } from "react-icons/fi";
 import DropDown from "./DropDown";
 import Navbar from "./Navbar";
 import BottomNavbar from "../Route/BottomNavbar/BottomNavbar";
@@ -38,13 +39,21 @@ const Header = ({ activeHeading }) => {
 
 
   const [language, setLanguage] = useState(i18n.language); // Get initial language
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleLanguageChange = (lang) => {
-
-
     i18n.changeLanguage(lang ? 'ar' : 'en'); // Set language based on checkbox state
-
     setLanguage(lang ? 'ar' : 'en');
+    document.documentElement.dir = lang ? 'rtl' : 'ltr';
+  };
+  
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
 
