@@ -1,6 +1,40 @@
-# 🚀 Enterprise E-Commerce Platform
+# 🚀 RealWisal - Enterprise E-Commerce Platform
 
 A comprehensive, enterprise-grade e-commerce platform built with modern technologies, designed to compete with major marketplaces like Amazon, Noon, and Flipkart.
+
+## 🚀 Quick Start
+
+### Using the start script
+```bash
+# Clone the repository
+git clone https://github.com/khiljihamza/realwisal.git
+cd realwisal
+
+# Run the start script
+./start.sh
+```
+
+### Manual setup
+```bash
+# Clone the repository
+git clone https://github.com/khiljihamza/realwisal.git
+cd realwisal
+
+# Start backend
+cd backend
+npm install
+npm run dev
+
+# Start socket server (in a new terminal)
+cd socket
+npm install
+npm run dev
+
+# Start frontend (in a new terminal)
+cd frontend
+npm install
+npm start
+```
 
 ## ✨ Features
 

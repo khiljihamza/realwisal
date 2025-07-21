@@ -17,7 +17,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: process.env.FRONTEND_URL ? [process.env.FRONTEND_URL, 'https://work-1-uzopeszbjielhbwr.prod-runtime.all-hands.dev', 'https://work-2-uzopeszbjielhbwr.prod-runtime.all-hands.dev'] : '*',
   credentials: true
 }));
 

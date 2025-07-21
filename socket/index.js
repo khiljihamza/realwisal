@@ -4,13 +4,24 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const server = http.createServer(app);
-const io = socketIO(server);
 
 require("dotenv").config({
   path: "./.env",
 });
 
-app.use(cors());
+// Configure CORS for socket.io
+const io = socketIO(server, {
+  cors: {
+    origin: process.env.FRONTEND_URL || "*",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
+
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*",
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -32,13 +43,15 @@ const getUser = (receiverId) => {
   return users.find((user) => user.userId === receiverId);
 };
 
-// Define a message object with a seen property
+// Define a message object with a seen property and unique ID
 const createMessage = ({ senderId, receiverId, text, images }) => ({
+  id: Date.now().toString(), // Add unique ID for each message
   senderId,
   receiverId,
   text,
   images,
   seen: false,
+  timestamp: new Date().toISOString()
 });
 
 io.on("connection", (socket) => {
